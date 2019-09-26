@@ -1,0 +1,75 @@
+/**
+ * Simple reset
+ */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img, embed, object, video {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+/**
+ * Color palette (generated with https://coolors.co/)
+ */
+ :root {
+    --main-color: rgb(255, 100, 0);
+    --main-color--light: rgb(250, 195, 43);
+    --main-color--light_on: rgba(224, 169, 17, 0.9);
+    --secondary-color: rgba(255, 232, 0, 1);
+    --dark-grey: rgba(30, 30, 36, 1);
+    --medium-grey: rgba(48, 48, 54, 1);
+    --light-grey: rgba(193, 188, 172, 1);    
+    --main-white: #fafafa;
+    --main-black: #020202;
+}
+
+/* Links */
+.link {
+    text-decoration: none;
+    color: var(--main-color--light);
+    text-transform: uppercase;
+}
+
+.link:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+/* Default button */
+.button-brown {
+    background-color: white;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .7rem;
+    border: 1px solid #B28564;
+    color: #B28564;
+    transition: .2s all ease;
+    font-weight: 700;
+    height: 100%;
+}
+
+.button-brown:hover {
+    background-color: #B28564;
+    color: white;
+}

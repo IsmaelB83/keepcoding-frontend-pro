@@ -1,0 +1,53 @@
+.navbar {
+    padding: 8px 20px;
+}
+
+.navbar.bg-dark {
+    background-color: rgba(0, 0, 0, .95) !important;
+    border-bottom: 1px solid var(--main-color--light);
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.navbar-brand img {
+    width: 4rem;
+    height: 2.75rem;
+}
+
+.navbar-brand span {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.9rem;
+    line-height: 2.25rem;
+    margin-left: 1rem;
+    color: red;
+}
+
+.nav-link {
+    font-weight: 300;
+    color: var(--main-color--light);
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.navbar-nav--right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-link--button {
+    font-size: 1rem;
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 10px #888888;
+}

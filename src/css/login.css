@@ -1,0 +1,60 @@
+.login {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, var(--main-color), var(--secondary-color));
+}
+
+.login-wrapper {
+    background-color: white;
+    border-top: 3px solid var(--medium-grey);
+    padding: 50px 30px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.35);
+    text-align: center;
+}
+
+.login-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2rem;
+    margin-left: 5px;
+    color: red;
+}
+
+.login-logo > img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.login-form {
+    margin: 50px 0 10px 0;
+}
+
+.login-link {
+    text-transform: lowercase;
+}
+
+.login-form .alert {
+    font-size: .75rem;
+    padding: 7.5px;
+}
+
+.login-form .login-btn--main {
+    background-color: var(--main-color--light);
+    border: 1px solid var(--main-color--light);
+}
+
+.login-form .login-btn--main:hover,
+.login-form .login-btn--main:focus,
+.login-form .login-btn--main:active {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}

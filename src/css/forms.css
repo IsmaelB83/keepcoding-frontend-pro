@@ -1,0 +1,27 @@
+/**
+ * Estilos de formularios
+ */
+.form-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-search input, .form-search button {
+    height: 40px;
+    font-size: .8rem;
+}
+
+.form-search button {
+    margin-top: 5px;
+}
+
+.form-search .input--brown {
+    border-radius: 0;
+    border-color: #B28564;
+    align-self: flex-end;
+}
+
+.form-search label {
+    margin: 0;
+    font-size: .7rem;
+}

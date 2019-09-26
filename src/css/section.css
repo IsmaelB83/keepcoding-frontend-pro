@@ -1,0 +1,69 @@
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: black;
+}
+
+.section-mainTitle {
+    font-family: 'Roboto Slab';
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.section-subTitle {
+    font-family: 'Roboto Slab';
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    letter-spacing: .7px;
+    color: #B28564;
+}
+
+.section-summary {
+    font-size: .9rem;
+    line-height: 1.8;
+    letter-spacing: .9px;
+    margin-bottom: 1.5rem;
+}
+
+.section-summary--small {
+    font-size: .75rem;
+    line-height: 1rem;
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+
+.section-detail {
+    margin-top: 6rem;
+}
+
+.detail-section--title small {
+    font-size: .6em;
+}
+
+.section-mainTitle small {
+    font-size: .4em;
+}
+
+.section-mainTitle .active, .section-commments .active {
+    color: green !important;
+}
+
+.section-totales {
+    border-top: 1px solid grey;
+    padding: 10px;
+}
+
+.section-totales h4 {
+    font-size: 1rem;
+}
+
+.section-totales .currency {
+    margin-right: 3px;
+    font-size: .8em;
+    font-weight: 700;
+}

@@ -1,0 +1,325 @@
+.beer-grid {
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-flow: row;
+    grid-gap: 30px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.beer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto Slab';
+}
+
+.beer p, .beer h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.beer-top {
+    text-align: center;
+    position: relative; 
+}
+
+.beer-img {
+    max-height: 200px;
+    width: auto;
+}
+
+.beer-top .beer-price {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    display: flex;
+    color: black;
+    font-size: 2.5rem;
+}
+
+.beer-price .beer-currency {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.beer-body {
+    margin-top: 20px;
+    border: 1px solid #B28564;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.beer-body .beer-title {
+    text-align: center;
+    grid-column: span 2;
+    border-bottom: 1px solid #B28564;
+    padding: 10px 0;
+}
+
+.beer-body .beer-title a {
+    color: #B28564;
+}
+
+.beer-body .beer-title a:hover {
+    text-decoration: none;
+}
+
+.beer-body .beer-middle, .beer-body .beer-social {
+    display: grid;
+    grid-column: span 2;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.beer-body .beer-middle {
+    border-bottom: 1px solid #B28564;
+}
+
+.beer-body .beer-social {
+    border-top: 1px solid #B28564;
+}
+
+.beer-social .beer-likes, .beer-social .beer-comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.beer-social .beer-likes {
+    border-right: 1px solid #B28564;
+}
+
+.beer-social i {
+    margin-right: 3px;
+}
+
+.beer-body .beer-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #B28564;
+}
+
+.beer-body .beer-btn {
+    justify-self: center;
+    align-self: center;
+    color: #B28564;
+    font-size: .8rem;
+    padding: 7.5px 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.beer-body .beer-btn:hover {
+    background-color: #B28564;
+    color: white;
+}
+
+.beer-body .beer-text {
+    text-align: center;
+    grid-column: span 2;
+    font-size: .85rem;
+    padding: 10px 10px;
+}
+
+/**
+ * DETAIL
+ */
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.detail-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.detail-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.detail-img {
+    max-height: 260px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.detail-img img {
+    max-width: 150px;
+}
+
+.detail .detail-price {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.detail .detail-price .currency {
+    font-size: .75em;
+    margin-right: 5px;
+}
+
+.detail-order {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.detail-quantity {
+    padding: 5px 10px;
+    font-family: 1.5rem;
+    max-width: 100px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.detail-button {
+    background-color: transparent;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .7rem;
+    height: 40px;
+    border: 1px solid #B28564;
+    transition: .2s all ease;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-button img {
+    margin-left: 5px;
+    width: 14px;
+    height: 14px;
+    display: none;
+}
+
+.detail-button:hover {
+    color: #B28564;
+}
+
+.detail-button--active {
+    background-color:var(--main-color--light) !important;
+}
+
+.detail-button--active img {
+    display: inline-block;
+}
+
+.detail-button--done {
+    background-color:greenyellow !important;
+}
+
+.detail-description {
+    font-size: .9rem;
+}
+
+.detail-footer {
+    margin-top: 1rem;
+}
+
+.detail-section {
+    margin-top: 1rem;
+}
+
+.detail-section h4 {
+    font-family: 1rem;
+    text-transform: capitalize;
+    font-family: 'Roboto Slab';
+}
+
+.detail-section p {
+    font-family: 1rem;
+    margin-top: .75rem;
+    font-size: .9rem;
+}
+
+.detail-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-flow: row;
+    grid-gap: 20px;
+}
+
+.detail-box {
+    flex-basis: 1;
+    padding: 20px;
+    border: 1px solid #B28564;
+    transition: .3s all ease;
+}
+
+.detail-box:hover {
+    background-color: #B28564;
+    color: white;
+}
+
+.detail-box h6 {
+    font-family: 'Roboto Slab';
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: .9rem;
+}
+
+.detail-box ul {
+    font-size: .9rem;
+}
+
+.detail-box ul li {
+    margin-bottom: 2px;
+    list-style-type: square;
+    margin-left: 1rem;
+}
+
+.detail-box ul span {
+    text-transform: uppercase;
+    font-size: .75em;
+    letter-spacing: .75px;
+    margin-left: 5px;
+}
+
+.grid_vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.beer_cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.beer_cart-left {
+    width: 75px;
+    height: 150px;
+    margin-right: 1.25rem;
+    overflow: hidden;
+}
+
+.beer_cart-left img {
+    height: 100%;
+}
+
+.beer_cart-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

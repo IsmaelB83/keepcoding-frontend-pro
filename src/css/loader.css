@@ -1,0 +1,40 @@
+/**
+ * Loaders para mejorar la UX
+ */
+.loader {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 9999;
+}
+
+.loader-api {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    margin: 1.5rem 0;
+}
+
+.loader img, .loader-api img {
+    height: 150px;
+    width: auto;
+}
+
+.loader p, .loader-api p {
+    text-transform: lowercase;
+    font-size: .9rem;
+    font-weight: 700;
+    color: orange;
+}
