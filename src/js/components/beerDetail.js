@@ -3,15 +3,13 @@
  */
 import { toggleClass } from './ui.js';
 import imgAvatar from '@assets/images/avatar.png';
-import imgLoading from '@assets/images/loading.gif'
+import imgLoading from '@assets/images/loading.gif';
 
 /**
  * Template to render the beer detail
  * @param {Object} beer Beer to render
  */
 const htmlTemplate = beer => {
-    console.log(imgLoading);
-
   // Boxes of ingredients
   let boxhtml = '';
   for (let prop in beer.ingredients) {

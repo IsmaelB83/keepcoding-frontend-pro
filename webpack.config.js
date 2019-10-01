@@ -53,21 +53,22 @@ module.exports = {
       },
       // npm install --save-dev html-loader
       {
-          test: /\.(html)$/,
-          use: {
-              loader: 'html-loader',
-              options: {
-                  attrs: ['img:src']
-              }
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: ['img:src']
           }
+        }
       },
       // npm install --save-dev file-loader url-loader
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/,
         use: {
-           loader: 'url-loader',      // Te carga la imagen en binario en el HTML (salvo que sea superior a 8Kb)
-           options: {
-            limit: 14000,              // Convert images < 14kb to base64 strings. Bigger than that as usual (request)
+          loader: 'url-loader', // Te carga la imagen en binario en el HTML (salvo que sea superior a 8Kb)
+          options: {
+            limit: 14000, // Convert images < 14kb to base64 strings. Bigger than that as usual (request)
+            publicPath: '/assets/images',
             outputPath: 'assets/images',
             name: devMode ? '[path][name].[ext]' : '[contenthash].[ext]'
           }
@@ -90,10 +91,10 @@ module.exports = {
     })
   ],
   devServer: {
-    port: 3000,     // port dev server
-    open: true,     // do not open browser by default
-    overlay: true,  // check errors
-    hot: true,      // hot module replacement
+    port: 3000, // port dev server
+    open: true, // do not open browser by default
+    overlay: true, // check errors
+    hot: true, // hot module replacement
     contentBase: path.join(__dirname, 'public'),
     watchContentBase: true
   }

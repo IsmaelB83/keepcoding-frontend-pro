@@ -5,7 +5,7 @@
 @import 'loader.css';
 @import 'section.css';
 @import 'footer.css';
-@import 'cards.css';
+@import 'cards.scss';
 @import 'comment.css';
 @import 'paginator.css';
 @import 'forms.css';
