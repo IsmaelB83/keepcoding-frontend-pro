@@ -1,5 +1,13 @@
 // Styles
 import './css/styles.css';
+/*
+- En caso de pasar el ==> options: { modules: true; } al css-loader me hashea las clases de css.
+- Entonces tengo que cargar el css en un objeto. Por ejemplo lo llamo styles en el import.
+- Luego tengo que hacer referencia a ellas a través del objetvo styles.[nombre_clase]
+import styles from './css/styles.css';
+<div class="${styles.example}">
+</div>;
+*/
 // Imports
 import { toggleLoader } from './js/components/ui.js';
 import renderDetail from './js/containers/detail.js';

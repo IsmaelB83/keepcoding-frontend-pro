@@ -14,8 +14,8 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 // Webpack config starts here
 module.exports = {
+  // Esta herramienta mapea el código tal y como era antes de empaquetar (facilita el debug)
   devtool: 'cheap-eval-source-map',
-  mode: 'development',
   entry: path.join(__dirname, 'src', 'index.js'),
   resolve: {
     alias: {
@@ -30,16 +30,23 @@ module.exports = {
     rules: [
       // npm install --save-dev mini-css-extract-plugin style-loader css-loader
       {
-        // HHave both HMR in development and styles extracted in a file for production builds.
+        // Have both HMR in development and styles extracted in a file for production builds.
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: process.env.NODE_ENV === 'development'
+              hmr: devMode
             }
           },
           'css-loader',
+          /* {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }, Con la opcion modules se cargan las clases hasheadas 
+          */
           'sass-loader'
         ]
       },
@@ -75,9 +82,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
-    new webpack.ProgressPlugin(),
+    new CleanWebpackPlugin(), // Limpia la carpeta build
+    new webpack.ProgressPlugin(), // Barra de progreso mientras compila webpack
     new HtmlWebpackPlugin({
+      // Genera el html. En este caso por el template, me lo genera con modelo al indicado
       title: 'Beerflix',
       filename: 'index.html',
       template: path.join(__dirname, 'index.html')
