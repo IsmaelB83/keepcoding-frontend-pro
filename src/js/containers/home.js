@@ -1,15 +1,15 @@
 /**
  * Imports
  */
-import state from '../state/index.js';
-import { render as renderForm, updateFilters } from '../components/searchForm.js';
-import renderLoader from '../components/loader.js';
-import renderFooter from '../components/footer.js';
-import renderNavbar from '../components/navbar.js';
-import renderLanding from '../components/landing.js';
-import { removeClass } from '../components/ui.js';
-import { render as renderBeerList, addListeners as addListenersBeers } from '../components/beerList.js';
-import { render as renderPaginator, addListeners as addListenersPage } from '../components/paginator.js';
+import state from '../state/index';
+import { render as renderForm, updateFilters } from '../components/searchForm';
+import renderLoader from '../components/loader';
+import renderFooter from '../components/footer';
+import renderNavbar from '../components/navbar';
+import renderLanding from '../components/landing';
+import { removeClass } from '../components/ui';
+import { render as renderBeerList, addListeners as addListenersBeers } from '../components/beerList';
+import { render as renderPaginator, addListeners as addListenersPage } from '../components/paginator';
 
 /**
  * Plantilla de la web principal

@@ -1,5 +1,5 @@
 // Styles
-import './css/styles.css';
+import './css/styles.scss';
 /*
 - En caso de pasar el ==> options: { modules: true; } al css-loader me hashea las clases de css.
 - Entonces tengo que cargar el css en un objeto. Por ejemplo lo llamo styles en el import.
@@ -9,12 +9,9 @@ import styles from './css/styles.css';
 </div>;
 */
 // Imports
-import { toggleLoader } from './js/components/ui.js';
-import renderDetail from './js/containers/detail.js';
-import renderLogin from './js/containers/login.js';
-import renderHome from './js/containers/home.js';
-import renderCart from './js/containers/cart.js';
-import state from './js/state/index.js';
+import { toggleLoader } from './js/components/ui';
+import state from './js/state/index';
+import './js/routes';
 
 // Intento login via local storage
 login();
@@ -35,6 +32,7 @@ async function login() {
           // eslint-disable-next-line no-undef
           page.redirect('/');
         } else {
+          // Si no es correcto, borro el local storage y me mantengo en el login
           localStorage.clear();
         }
       }
@@ -46,87 +44,3 @@ async function login() {
     toggleLoader('d-none');
   }
 }
-
-/**
- * Ruta principal
- */
-// eslint-disable-next-line no-undef
-page('/login', async () => {
-  try {
-    renderLogin();
-  } catch (error) {
-    // Log
-    const aux = `ERROR page('/login') ==> ${error.toString()}`;
-    console.log(aux);
-    alert(aux);
-  }
-});
-
-/**
- * Ruta con las cervezas
- */
-// eslint-disable-next-line no-undef
-page('/', () => {
-  try {
-    // Si está autenticado renderizo el home, si no redirijo a login
-    if (state.isAuthenticated()) {
-      renderHome();
-    } else {
-      // eslint-disable-next-line no-undef
-      page.redirect('/login');
-    }
-  } catch (error) {
-    // Log
-    const aux = `ERROR page('/') ==> ${error.toString()}`;
-    console.log(aux);
-    alert(aux);
-  }
-});
-
-/**
- * Ruta con el detalle
- */
-// eslint-disable-next-line no-undef
-page('/detail/:id', ctx => {
-  try {
-    // Si está autenticado renderizo el home, si no redirijo a login
-    if (state.isAuthenticated()) {
-      const {
-        params: { id }
-      } = ctx;
-      renderDetail(id);
-    } else {
-      // eslint-disable-next-line no-undef
-      page.redirect('/login');
-    }
-  } catch (error) {
-    // Log
-    const aux = `ERROR page('/detail') ==> ${error.toString()}`;
-    console.log(aux);
-    alert(aux);
-  }
-});
-
-/**
- * Ruta con el carrito de la compra
- */
-// eslint-disable-next-line no-undef
-page('/cart', () => {
-  try {
-    // Si está autenticado renderizo el home, si no redirijo a login
-    if (state.isAuthenticated()) {
-      renderCart();
-    } else {
-      // eslint-disable-next-line no-undef
-      page.redirect('/login');
-    }
-  } catch (error) {
-    // Log
-    const aux = `ERROR page('/login') ==> ${error.toString()}`;
-    console.log(aux);
-    alert(aux);
-  }
-});
-
-// eslint-disable-next-line no-undef
-page();

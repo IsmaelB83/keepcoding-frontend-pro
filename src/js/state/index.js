@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import Api from '../api/index.js';
+import Api from '../api/index';
 
 /**
  * Definitions

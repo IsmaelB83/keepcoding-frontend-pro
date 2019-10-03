@@ -1,18 +1,18 @@
 /**
  * Imports
  */
-import state from '../state/index.js';
-import renderLoader from '../components/loader.js';
-import renderFooter from '../components/footer.js';
-import renderNavbar from '../components/navbar.js';
+import state from '../state/index';
+import renderLoader from '../components/loader';
+import renderFooter from '../components/footer';
+import renderNavbar from '../components/navbar';
 import {
   render as renderDetail,
   addListeners as addListenersDetail,
   updateLikes,
   updateComments
-} from '../components/beerDetail.js';
-import { removeClass } from '../components/ui.js';
-import renderComments from '../components/comments.js';
+} from '../components/beerDetail';
+import { removeClass } from '../components/ui';
+import renderComments from '../components/comments';
 
 /**
  * Plantilla de la web de detalle

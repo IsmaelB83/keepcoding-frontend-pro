@@ -1,11 +1,11 @@
 /**
  * Imports
  */
-import state from '../state/index.js';
-import renderFooter from '../components/footer.js';
-import renderNavbar from '../components/navbar.js';
-import renderCart from '../components/beerCart.js';
-import { removeClass } from '../components/ui.js';
+import state from '../state/index';
+import renderFooter from '../components/footer';
+import renderNavbar from '../components/navbar';
+import renderCart from '../components/beerCart';
+import { removeClass } from '../components/ui';
 
 /**
  * Plantilla de la web principal

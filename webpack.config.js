@@ -16,7 +16,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
   // Esta herramienta mapea el código tal y como era antes de empaquetar (facilita el debug)
   devtool: 'cheap-eval-source-map',
-  entry: path.join(__dirname, 'src', 'index.js'),
+  entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index.js')],
   resolve: {
     alias: {
       '@assets': path.resolve(__dirname, 'assets')
@@ -57,7 +57,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'eslint-loader'
       },
-      // npm install --save-dev babel-loader
+      // npm install --save-dev babel-loader @babel/core @babel/preset-env
       {
         test: /\.js$/,
         exclude: /node_modules/,
