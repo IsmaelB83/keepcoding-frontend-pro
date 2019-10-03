@@ -7,7 +7,7 @@ import renderLoader from '../components/loader';
 import renderFooter from '../components/footer';
 import renderNavbar from '../components/navbar';
 import renderLanding from '../components/landing';
-import { removeClass } from '../components/ui';
+import { removeClass } from '../components/toggles';
 import { render as renderBeerList, addListeners as addListenersBeers } from '../components/beerList';
 import { render as renderPaginator, addListeners as addListenersPage } from '../components/paginator';
 

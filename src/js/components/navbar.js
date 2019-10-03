@@ -1,8 +1,9 @@
 /**
  * Imports
  */
+import page from 'page';
 import state from '../state/index';
-import { toggleLoader } from './ui';
+import { toggleLoader } from './toggles';
 import imgBeerflixLogo from '@assets/images/logo_beerflix.png';
 
 /**

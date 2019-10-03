@@ -1,9 +1,10 @@
 /**
  * Imports
  */
-import { removeClass, addClass, toggleLoader } from '../components/ui';
-import { render as renderLogin, addListeners as addListenersLogin } from '../components/login';
+import page from 'page';
 import state from '../state/index';
+import { removeClass, addClass, toggleLoader } from '../components/toggles';
+import { render as renderLogin, addListeners as addListenersLogin } from '../components/login';
 
 /**
  * Plantilla de la web de login

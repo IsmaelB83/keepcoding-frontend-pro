@@ -1,12 +1,12 @@
 /**
  * Imports
  */
-import renderDetail from '../containers/detail';
-import renderLogin from '../containers/login';
-import renderHome from '../containers/home';
-import renderCart from '../containers/cart';
-import state from '../state/index';
 import page from 'page';
+import state from '../state/index';
+import renderCart from '../containers/cart';
+import renderHome from '../containers/home';
+import renderLogin from '../containers/login';
+import renderDetail from '../containers/detail';
 
 /**
  * Ruta principal

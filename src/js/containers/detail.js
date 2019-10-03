@@ -1,6 +1,7 @@
 /**
  * Imports
  */
+import page from 'page';
 import state from '../state/index';
 import renderLoader from '../components/loader';
 import renderFooter from '../components/footer';
@@ -11,7 +12,7 @@ import {
   updateLikes,
   updateComments
 } from '../components/beerDetail';
-import { removeClass } from '../components/ui';
+import { removeClass } from '../components/toggles';
 import renderComments from '../components/comments';
 
 /**

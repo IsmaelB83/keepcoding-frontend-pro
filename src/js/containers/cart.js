@@ -5,7 +5,7 @@ import state from '../state/index';
 import renderFooter from '../components/footer';
 import renderNavbar from '../components/navbar';
 import renderCart from '../components/beerCart';
-import { removeClass } from '../components/ui';
+import { removeClass } from '../components/toggles';
 
 /**
  * Plantilla de la web principal

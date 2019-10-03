@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import { toggleClass } from './ui';
+import { toggleClass } from './toggles';
 import imgAvatar from '@assets/images/avatar.png';
 import imgLoading from '@assets/images/loading.gif';
 

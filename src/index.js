@@ -1,5 +1,6 @@
 // Styles
 import './css/styles.scss';
+import page from 'page';
 /*
 - En caso de pasar el ==> options: { modules: true; } al css-loader me hashea las clases de css.
 - Entonces tengo que cargar el css en un objeto. Por ejemplo lo llamo styles en el import.
@@ -9,7 +10,7 @@ import styles from './css/styles.css';
 </div>;
 */
 // Imports
-import { toggleLoader } from './js/components/ui';
+import { toggleLoader } from './js/components/toggles';
 import state from './js/state/index';
 import './js/routes';
 
