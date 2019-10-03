@@ -35,7 +35,6 @@ async function login() {
           // eslint-disable-next-line no-undef
           page.redirect('/');
         } else {
-          // Si no es correcto, borro el local storage y me mantengo en el login
           localStorage.clear();
         }
       }

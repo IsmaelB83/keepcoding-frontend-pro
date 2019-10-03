@@ -50,11 +50,18 @@ module.exports = {
           'sass-loader'
         ]
       },
-      // npm install --save-dev babel-loader @babel/core @babel/
+      // npm install --save-dev eslint-loader
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
+      // npm install --save-dev babel-loader
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: ['babel-loader', 'eslint-loader']
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       },
       // npm install --save-dev html-loader
       {
