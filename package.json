@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build_dev": " webpack --config webpack.config.dev.js",
-    "build_dev:watch": "npm run build -- --watch",
+    "build_dev": "webpack --config webpack.config.dev.js",
+    "build_dev:watch": "npm run build_dev -- --watch",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "NODE_ENV=production webpack --config webpack.config.prod.js"
+    "build": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "analyzer": "webpack --config webpack.config.analyzer.js"
   },
   "repository": {
     "type": "git",
@@ -57,6 +58,7 @@
     "style-loader": "^1.0.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.41.0",
+    "webpack-bundle-analyzer": "^3.5.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
   }
