@@ -12,6 +12,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // Control development vs production mode
 const devMode = process.env.NODE_ENV !== 'production';
 
+const aux = path.resolve(__dirname, 'src/resources');
+console.log(`AQUI --> ${aux}`);
+
 // Webpack config starts here
 module.exports = {
   // Esta herramienta mapea el código tal y como era antes de empaquetar (facilita el debug)
@@ -19,7 +22,7 @@ module.exports = {
   entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index.js')],
   resolve: {
     alias: {
-      '@assets': path.resolve(__dirname, 'assets')
+      '@images': path.resolve(__dirname, 'src/resources/images')
     }
   },
   output: {
@@ -77,7 +80,7 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/,
         use: {
-          loader: 'url-loader', // Te carga la imagen en binario en el HTML (salvo que sea superior a 8Kb)
+          loader: 'url-loader', // Mejor que file-loader porque te carga la imagen en binario en el HTML si es menor a "limit"
           options: {
             limit: 14000, // Convert images < 14kb to base64 strings. Bigger than that as usual (request)
             publicPath: '/assets/images',
@@ -95,7 +98,7 @@ module.exports = {
       // Genera el html. En este caso por el template, me lo genera con modelo al indicado
       title: 'Beerflix',
       filename: 'index.html',
-      template: path.join(__dirname, 'index.html')
+      template: path.join(__dirname, 'src/index.html')
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output. Both options are optional

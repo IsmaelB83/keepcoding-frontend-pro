@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import imgLoading from '@assets/images/loading.gif';
+import imgLoading from '@images/loading.gif';
 
 /**
  * Template que genera el contenido del componente

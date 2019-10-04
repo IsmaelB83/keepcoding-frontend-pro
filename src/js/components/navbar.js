@@ -4,7 +4,7 @@
 import page from 'page';
 import state from '../state/index';
 import { toggleLoader } from './toggles';
-import imgBeerflixLogo from '@assets/images/logo_beerflix.png';
+import imgBeerflixLogo from '@images/logo_beerflix.png';
 
 /**
  * Template que genera el contenido del componente

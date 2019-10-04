@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import socialImg from '@assets/images/estanciaazul.ico';
+import socialImg from '@images/estanciaazul.ico';
 
 /**
  * Template que genera el contenido del componente

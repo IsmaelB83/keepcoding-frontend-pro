@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import imgAvatar from '@assets/images/avatar.png';
+import imgAvatar from '@images/avatar.png';
 
 /**
  * Template que genera el contenido del componente

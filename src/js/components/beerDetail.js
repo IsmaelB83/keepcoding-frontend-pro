@@ -2,8 +2,8 @@
  * Imports
  */
 import { toggleClass } from './toggles';
-import imgAvatar from '@assets/images/avatar.png';
-import imgLoading from '@assets/images/loading.gif';
+import imgAvatar from '@images/avatar.png';
+import imgLoading from '@images/loading.gif';
 
 /**
  * Template to render the beer detail

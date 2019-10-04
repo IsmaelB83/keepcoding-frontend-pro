@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import imgLogo from '@assets/images/logo.png';
+import imgLogo from '@images/logo.png';
 
 /**
  * Template to return HTML

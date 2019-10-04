@@ -1,10 +1,10 @@
 /**
  * Imports
  */
-import imgPanelDesktop from '@assets/images/heropanel@desktop.jpg';
-import imgPanelTablet from '@assets/images/heropanel@tablet.jpg';
-import imgPanel500 from '@assets/images/heropanel-500.jpg';
-import imgBeerflixLogo from '@assets/images/logo_beerflix.png';
+import imgPanelDesktop from '@images/heropanel@desktop.jpg';
+import imgPanelTablet from '@images/heropanel@tablet.jpg';
+import imgPanel500 from '@images/heropanel-500.jpg';
+import imgBeerflixLogo from '@images/logo_beerflix.png';
 
 /**
  * Template que genera el contenido del componente
