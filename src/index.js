@@ -1,6 +1,6 @@
 // Styles
 import './css/styles.scss';
-import page from 'page';
+//import page from 'page';
 /*
 - En caso de pasar el ==> options: { modules: true; } al css-loader me hashea las clases de css.
 - Entonces tengo que cargar el css en un objeto. Por ejemplo lo llamo styles en el import.
