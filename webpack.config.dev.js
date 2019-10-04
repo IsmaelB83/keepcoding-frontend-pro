@@ -2,23 +2,16 @@
 const path = require('path');
 // Basic webpack npm package
 const webpack = require('webpack');
-// Minify css
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Simplifies creation of HTML files to serve your webpack bundles
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Plugin to remove the build/dist folder
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-// Control development vs production mode
-const devMode = process.env.NODE_ENV !== 'production';
-
-const aux = path.resolve(__dirname, 'src/resources');
-console.log(`AQUI --> ${aux}`);
-
 // Webpack config starts here
 module.exports = {
   // Esta herramienta mapea el código tal y como era antes de empaquetar (facilita el debug)
   devtool: 'cheap-eval-source-map',
+  mode: 'development',
   entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index.js')],
   resolve: {
     alias: {
@@ -27,31 +20,14 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: devMode ? 'bundle.js' : 'bundle.[hash].js'
+    filename: 'bundle.js'
   },
   module: {
     rules: [
-      // npm install --save-dev mini-css-extract-plugin style-loader css-loader
+      // npm install --save-dev postcss-loader style-loader css-loader sass-loader
       {
-        // Have both HMR in development and styles extracted in a file for production builds.
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: devMode
-            }
-          },
-          'css-loader',
-          /* {
-            loader: 'css-loader',
-            options: {
-              modules: true
-            }
-          }, Con la opcion modules se cargan las clases hasheadas 
-          */
-          'sass-loader'
-        ]
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
       // npm install --save-dev eslint-loader
       {
@@ -82,10 +58,35 @@ module.exports = {
         use: {
           loader: 'url-loader', // Mejor que file-loader porque te carga la imagen en binario en el HTML si es menor a "limit"
           options: {
-            limit: 14000, // Convert images < 14kb to base64 strings. Bigger than that as usual (request)
+            limit: 8000, // Convert images < 14kb to base64 strings. Bigger than that as usual (request)
             publicPath: '/assets/images',
             outputPath: 'assets/images',
-            name: devMode ? '[path][name].[ext]' : '[contenthash].[ext]'
+            name: '[path][name].[ext]'
+          }
+        }
+      },
+      // npm install --save-dev image-webpack-loader
+      {
+        enforce: 'pre',
+        test: /\.(jpg|png|gif|svg)$/,
+        loader: 'image-webpack-loader',
+        options: {
+          mozjpeg: {
+            progressive: true,
+            quality: 65
+          },
+          optipng: {
+            enabled: false
+          },
+          pngquant: {
+            quality: [0.65, 0.9],
+            speed: 4
+          },
+          gifsicle: {
+            interlaced: false
+          },
+          webp: {
+            quality: 75
           }
         }
       }
@@ -99,11 +100,6 @@ module.exports = {
       title: 'Beerflix',
       filename: 'index.html',
       template: path.join(__dirname, 'src/index.html')
-    }),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output. Both options are optional
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
     })
   ],
   devServer: {
