@@ -1,6 +1,6 @@
 // Styles
 import './css/styles.scss';
-//import page from 'page';
+import page from 'page';
 /*
 - En caso de pasar el ==> options: { modules: true; } al css-loader me hashea las clases de css.
 - Entonces tengo que cargar el css en un objeto. Por ejemplo lo llamo styles en el import.
@@ -31,7 +31,7 @@ async function login() {
         if (auth) {
           // Si es corecto navego al index
           // eslint-disable-next-line no-undef
-          //page.redirect('/');
+          page.redirect('/');
         } else {
           // Si no es correcto, borro el local storage y me mantengo en el login
           localStorage.clear();
