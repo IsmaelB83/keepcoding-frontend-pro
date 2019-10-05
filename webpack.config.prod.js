@@ -12,7 +12,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // Webpack config starts here
 module.exports = {
   // Esta herramienta mapea el código tal y como era antes de empaquetar (facilita el debug)
-  devtool: 'cheap-eval-source-map',
   mode: 'production',
   entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index.js')],
   resolve: {
