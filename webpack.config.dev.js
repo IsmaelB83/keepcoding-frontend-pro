@@ -48,7 +48,7 @@ module.exports = {
         use: {
           loader: 'html-loader',
           options: {
-            attrs: ['img:src']
+            attrs: ['img:src', 'link:href']
           }
         }
       },
@@ -61,7 +61,7 @@ module.exports = {
             limit: 8000, // Convert images < 14kb to base64 strings. Bigger than that as usual (request)
             publicPath: '/assets/images',
             outputPath: 'assets/images',
-            name: '[path][name].[ext]'
+            name: '[name].[ext]'
           }
         }
       },
