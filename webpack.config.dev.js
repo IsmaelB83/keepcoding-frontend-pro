@@ -6,8 +6,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Plugin to remove the build/dist folder
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// Generate favicon
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 // Webpack config starts here
 module.exports = {
@@ -102,8 +100,7 @@ module.exports = {
       title: 'Beerflix',
       filename: 'index.html',
       template: path.join(__dirname, 'src/index.html')
-    }),
-    new FaviconsWebpackPlugin('src/resources/images/logo.png')
+    })
   ],
   devServer: {
     port: 3000, // port dev server

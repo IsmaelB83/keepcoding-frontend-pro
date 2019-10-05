@@ -8,8 +8,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Plugin to remove the build/dist folder
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// Generate favicon
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 // Webpack config starts here
 module.exports = {
@@ -112,8 +110,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css'
-    }),
-    new FaviconsWebpackPlugin('src/resources/images/logo.png')
+    })
   ],
   devServer: {
     port: 3000, // port dev server
