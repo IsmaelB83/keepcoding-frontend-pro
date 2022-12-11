@@ -24,7 +24,7 @@
   "author": "Ismael Bernal (ismaelbernal83@gmail.com)",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "page": "^1.11.4"
   },
   "devDependencies": {
